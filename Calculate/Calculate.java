@@ -12,41 +12,47 @@ public class Calculate {
     }
 
     public static void main(String[] args) {
-        double finalExam = 0.0, midterm = 0.0, assignments = 0.0, tests = 0.0;
         Scanner input = new Scanner(System.in);
-        
-        System.out.println("Enter 7 assignment grades:");
-        for (int i = 0; i < 7; i++){
-            assignments += input.nextDouble();
+
+        // keep running while there are still numbers in the input
+        while (input.hasNextDouble()) {
+
+            double finalExam = 0.0, midterm = 0.0, assignments = 0.0, tests = 0.0;
+
+            System.out.println("Enter 7 assignment grades:");
+            for (int i = 0; i < 7; i++){
+                assignments += input.nextDouble();
+            }
+            assignments /= 7;
+
+            System.out.println("Enter 7 test grades:");
+            for (int i = 0; i < 7; i++){
+                tests += input.nextDouble();
+            }
+            tests /= 7;
+
+            System.out.print("Enter your midterm grade: ");
+            midterm = input.nextDouble();
+
+            System.out.print("Enter your final exam grade: ");
+            finalExam = input.nextDouble();
+
+            double E = (finalExam * 0.4 + midterm * 0.2 + tests * 0.1) / 0.7;
+            double grade;
+
+            if (E < 60) {
+                grade = E;
+            } else if (E < 80) {
+                double W = ((E - 60) / 20) * 0.3;
+                grade = (1 - W) * E + W * assignments;
+            } else {
+                grade = finalExam * 0.4 + midterm * 0.2 + tests * 0.1 + assignments * 0.3;
+            }
+
+            System.out.println("Your final grade is: " + grade);
+            System.out.println("Your letter grade is: " + letterGrade(grade));
+            System.out.println();
         }
-        assignments /= 7;
-
-        System.out.println("Enter 7 test grades:");
-        for (int i = 0; i < 7; i++){
-            tests += input.nextDouble();
-        }
-        tests /= 7;
-
-        System.out.print("Enter your midterm grade: ");
-        midterm = input.nextDouble();
-
-        System.out.print("Enter your final exam grade: ");
-        finalExam = input.nextDouble();
-
-        double E = (finalExam * 0.4 + midterm * 0.2 + tests * 0.1) / 0.7;
-        double grade;
-
-        if (E < 60) {
-            grade = E;
-        } else if (E < 80) {
-            double W = ((E - 60) / 20) * 0.3;
-            grade = (1 - W) * E + W * assignments;
-        } else {
-            grade = finalExam * 0.4 + midterm * 0.2 + tests * 0.1 + assignments * 0.3;
-        }
-
-        System.out.println("Your final grade is: " + grade);
-        System.out.println("Your letter grade is: " + letterGrade(grade));
 
         input.close();
     }
