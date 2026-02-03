@@ -50,12 +50,22 @@ public class Fraction {
         return denominator;
     }
     public String toString() {
+        if (denominator == 1) {
+            return Long.toString(numerator);
+        }
         return numerator + "/" + denominator;
     }
     public static void main (String[] args) {
         Fraction f1 = new Fraction (6, -24);
         System.out.println(f1);
         Fraction f2 = new Fraction (0, 8);
-        System.out.println(f2);
+        Fraction f3 = new Fraction (8, -6);
+        System.out.println(f3);
+        Fraction f4 = new Fraction (23, 0);
+        Fraction f5 = new Fraction (-6, 0);
+        Fraction f6 = new Fraction (7, 1);
+        System.out.println(f6);
+        Fraction f7 = new Fraction (0, 0);
+
     }
 }
