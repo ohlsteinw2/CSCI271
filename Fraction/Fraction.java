@@ -27,14 +27,17 @@ public class Fraction {
                 System.out.println("Infinity");
             }
         }
-        else { long gcd = gcd(num, denom);
+        else { 
+            long gcd = gcd(num, denom);
             numerator = num / gcd;
             denominator = denom / gcd;
             if (denominator < 0) {
                 numerator = -numerator;
                 denominator = -denominator;
             }
+
         }
+        
     }
     public Fraction(long num) {
         numerator = num;
@@ -46,9 +49,13 @@ public class Fraction {
     public long getDenominator() {
         return denominator;
     }
-    
+    public String toString() {
+        return numerator + "/" + denominator;
+    }
     public static void main (String[] args) {
-        new Fraction (6, -24);
-        new Fraction (0, 8);
+        Fraction f1 = new Fraction (6, -24);
+        System.out.println(f1);
+        Fraction f2 = new Fraction (0, 8);
+        System.out.println(f2);
     }
 }
