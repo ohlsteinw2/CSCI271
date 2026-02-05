@@ -15,6 +15,13 @@ public class Fraction{
         
     }
 
+
+// GCD Function gives us our greatest common divisor 
+
+
+
+// Fraction function takes a numerator and denominator and checks to see if both are 0 if so return NaN, if one is zero check to see if negative or not
+// If it's neither then actually calculate our fraction by calling the GCD function and then dividing our num and denom by the GCD. 
     public Fraction(long num, long denom) {
         if ((num == 0) && (denom == 0)) {
             System.out.println("NaN");
@@ -49,12 +56,18 @@ public class Fraction{
     public long getDenominator() {
         return denominator;
     }
+
+// Converts our fractions to strings to print out, if the denom = 1 then just return the numerator because 7/1 = 7 5/1 = 5 etc...
+// if not = 1 then return the num / denom
     public String toString() {
         if (denominator == 1) {
             return Long.toString(numerator);
         }
         return numerator + "/" + denominator;
     }
+
+// For our add and subtract methods we cross multiply to get our answers. 
+// But for add we + and subtract we -
     public Fraction add(Fraction other) {
         long num = this.numerator * other.denominator + other.numerator * this.denominator;
         long denom = this.denominator * other.denominator;
@@ -65,11 +78,15 @@ public class Fraction{
         long denom = this.denominator * other.denominator;
         return new Fraction(num, denom);
     }
+
+// For our multiply method  we multiply straight across
     public Fraction multiply(Fraction other) {
         long num = this.numerator * other.numerator;
         long denom = this.denominator * other.denominator;
         return new Fraction(num, denom);
     }
+
+// For divide we multiply the inverse
     public Fraction divide(Fraction other) {
         long num = this.numerator * other.denominator;
         long denom = this.denominator * other.numerator;
@@ -85,6 +102,7 @@ public class Fraction{
         return new Fraction(num, denom);
     }
 
+// Hard coded examples that we were given. 
     public static void main (String[] args) {
         Fraction f1 = new Fraction (6, -24);
         System.out.println(f1);
