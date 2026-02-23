@@ -1,0 +1,21 @@
+Script started on 2026-02-06 12:11:33-05:00 [TERM="xterm-256color" TTY="/dev/pts/24" COLUMNS="80" LINES="24"]
+[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271[00m$ ls
+[?2004lAssignment2.txt  [0m[01;34mCSCI271_Assignment2_WilliamOhlstein[0m  README.md
+[01;34mCalculate[0m        [01;34mFraction[0m
+[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271[00m$ cd CSCI271_Assignment2_WilliamOhlstein/
+[?2004l[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[00m$ c[Kjava /F.Fraction 
+[?2004lError: Could not find or load main class .Fraction
+Caused by: java.lang.ClassNotFoundException: /Fraction
+[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[00m$ java Fraction 
+[?2004l-1/4
+Infinity
+-4/3
+Infinity
+-Infinity
+7
+NaN
+240/133
+[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[00m$ exit
+[?2004lexit
+
+Script done on 2026-02-06 12:11:56-05:00 [COMMAND_EXIT_CODE="0"]
