@@ -1,0 +1,18 @@
+Script started on 2026-02-06 12:09:40-05:00 [TERM="xterm-256color" TTY="/dev/pts/28" COLUMNS="80" LINES="24"]
+[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[00m$ quit
+[?2004lCommand 'quit' not found, but can be installed with:
+snap install quit
+Please ask your administrator.
+[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[00m$ quit
+[?2004lCommand 'quit' not found, but can be installed with:
+snap install quit
+Please ask your administrator.
+[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[00m$ kill
+[?2004lkill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[00m$ kill
+[?2004lkill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+[?2004h]0;ohlsteinw2@thur114-hp1: ~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[01;32mohlsteinw2@thur114-hp1[00m:[01;34m~/CSCI271/CSCI271_Assignment2_WilliamOhlstein[00m$ [?2004l
+exit
+
+Script done on 2026-02-06 12:10:12-05:00 [COMMAND_EXIT_CODE="2"]
