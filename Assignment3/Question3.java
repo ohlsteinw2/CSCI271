@@ -32,4 +32,4 @@ public class Question3 {
         int prevMax = max(A, n - 1);  // recursive call
         return (A[n - 1] > prevMax) ? A[n - 1] : prevMax;
     }
-}
+} // Time Complexity O(n)
