@@ -16,4 +16,4 @@ public class Question6 {
         }
         return inputNum + sumEven(inputNum - 1);
     }
-}
+} // Time Complexity O(n)
