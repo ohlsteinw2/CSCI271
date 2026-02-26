@@ -15,4 +15,4 @@ public class Question5 {
     String S = (scanner.next());
     System.out.println("The reverse: " + reverseString(S));
 }
-    } // Time Complexity O(n)
+    } // Time Complexity O(n^2)
