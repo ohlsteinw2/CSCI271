@@ -29,4 +29,4 @@ public class Question4 {
 
         System.out.println("Digit " + D + " appears " + result + " times.");
     }
-}
+} // Time Complexity O(n)
