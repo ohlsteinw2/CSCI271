@@ -16,4 +16,4 @@ public static void main(String[] args){
     String S = scanner.nextLine();
     System.out.println("Length of string is: " + lengthofString(S));
 }
-}
+} // Time Complexity O(n)
