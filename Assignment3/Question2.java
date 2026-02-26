@@ -21,4 +21,4 @@ public class Question2 {
     char C = scanner.nextLine().charAt(0);
     System.out.println("Count of '" + C + "' is: " + countChar(S, C));
     }
-}
+} // Time complexity O(n)
