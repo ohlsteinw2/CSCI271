@@ -1,28 +1,32 @@
-package Assignment3;
+package Assignment3
 import java.util.Scanner;
-
 public class Question4 {
-    private static int countNum(String sN, char sD){
-        if (sN.isEmpty()){ // base case
+
+    public static int countDigit(long N, int D) {
+        
+        if (N == 0) { // base case
             return 0;
         }
-        else if (sN.charAt(0) == sD) {
-            return countNum(sN.substring(1), sD) + 1;
-        }
-        else {
-            return countNum(sN.substring(1), sD);
+
+        // Check last digit
+        if (N % 10 == D) {
+            return 1 + countDigit(N / 10, D); // recursive call
+        } else {
+            return countDigit(N / 10, D);
         }
     }
-    public static void main(String[] args) {
-        System.out.println("Please enter a number");
-        Scanner scanner = new Scanner (System.in);
-        long N = (scanner.nextLong());
-        System.out.println("Now enter a number you would like to see how many times appears in the number.");
-        String input = scanner.next();
-        char sD = input.charAt(0);
-        String sN = String.valueOf(N);
-        System.out.println("Number: " + N);
-        System.out.println(sD + " appears: " + countNum(sN, sD));
 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter an integer: ");
+        long N = scanner.nextLong();
+
+        System.out.println("Enter a single digit: ");
+        int D = scanner.nextInt();
+
+        int result = countDigit(N, D);
+
+        System.out.println("Digit " + D + " appears " + result + " times.");
     }
 }
