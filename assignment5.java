@@ -233,6 +233,74 @@ class List<T> {
     return res;
   }
 
+  //*********************************** splitAt()****** */
+List<T> splitAt(int index){
+  if(this.isEmpty()){
+    System.out.println("The list is empty!");
+    return null;
+  }
+  else if(index >= this.size || index < 0){
+    System.out.println("Index is out of bounds");
+    return null;
+  }
+  else {
+    List<T> newList = new List<>();
+    int originalSize = this.size;
+    
+    int count = 0;
+    Node<T> temp = this.head;
+    while(count < index){
+      temp = temp.getNext();
+      count++;
+    }
+    Node<T> traverse = temp.getNext();
+    while (traverse != null){
+      newList.addLast(traverse.getElement());
+      traverse = traverse.getNext();
+    }
+    temp.setNext(null);
+    newList.size = originalSize - (index +1);
+    this.size = index + 1;
+
+    return newList;
+  }
+}
+
+// ************************************ insertSorted() *****************************/
+void insertSorted(T item){
+  if(this.isEmpty()){
+    this.addLast(item);
+  }
+  else if (((Comparable<T>) item).compareTo(this.head.getElement()) <= 0) {
+    this.addFront(item);
+  }
+  else {
+    Node<T> temp = this.head;
+    while(temp.getNext() != null && ((Comparable<T>) item).compareTo(temp.getNext().getElement()) > 0) {
+      temp = temp.getNext();
+    }
+    Node<T> newNode = new Node<>(item);
+    newNode.setNext(temp.getNext());
+    temp.setNext(newNode);
+    this.size++;
+  }
+}
+
+// ***************************************** insertionSort() ****************************** / 
+void insertionSort() {
+   if(this.size <= 1){
+        return;
+    }
+    int n = (this.size / 2) - 1;
+    List<T> L2 = this.splitAt(n);
+    this.insertionSort();
+    L2.insertionSort();
+    Node<T> temp = L2.head;
+    while(temp != null){
+        this.insertSorted(temp.getElement());
+        temp = temp.getNext();
+  }
+}
 
 }
 
@@ -260,6 +328,9 @@ public class assignment5 {
       System.out.println( "7: delete front");
       System.out.println( "8: delete at index");
       System.out.println( "9: exit");
+      System.out.println( "11: insert sorted");
+      System.out.println("88: split at index");
+      System.out.println("99: sort list");
       ch = sc.nextInt();
 
       switch (ch) {
@@ -305,7 +376,28 @@ public class assignment5 {
           break;
         default:
           System.out.println( "invalid selection");
+        case 11:
+          System.out.println("enter item to insert:");
+          item = sc.nextInt();
+          list.insertSorted(item);
+          break;
+        case 88: System.out.println("enter index:");
+        index = sc.nextInt();
+        list.displayAll();
+        List<Integer> NL = list.splitAt(index);
+        NL.displayAll();
+        list.displayAll();
+        break;
+        case 99:
+          if (list.isEmpty()){
+            System.out.println("List is empty.");
+          }
+          else {
+            list.insertionSort();
+          }
+          break;
       }
     } while(!quit);
   }
 }
+
